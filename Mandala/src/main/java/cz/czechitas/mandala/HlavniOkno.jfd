@@ -1,0 +1,133 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_162" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets rel,hidemode 3"
+			"$columnConstraints": "[fill][87,fill][fill][fill][fill][fill][30,fill][30,fill][31,grow,fill][fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][fill][][fill][]"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Mandala"
+			"$locationPolicy": 1
+			"minimumSize": new java.awt.Dimension( 700, 800 )
+			auxiliary() {
+				"JavaCodeGenerator.postInitCode": "this.contentPane = (JPanel) this.getContentPane();\nthis.contentPane.setBackground(this.getBackground());\nLayoutManager layout = this.contentPane.getLayout();\nif (layout instanceof MigLayout) {\n    this.migLayoutManager = (MigLayout) layout;\n}\n"
+			}
+			addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikModra", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labAktualniBarva"
+				"text": "Výběr barvy"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labCervena"
+				"background": new java.awt.Color( 200, 30, 20, 255 )
+				"opaque": true
+				"maximumSize": new java.awt.Dimension( 32, 32 )
+				"minimumSize": new java.awt.Dimension( 32, 32 )
+				"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				"font": new java.awt.Font( "Segoe UI", 1, 20 )
+				"foreground": sfield java.awt.Color white
+				"horizontalAlignment": 0
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikCervena", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labZluta"
+				"background": new java.awt.Color( 247, 217, 70, 255 )
+				"opaque": true
+				"maximumSize": new java.awt.Dimension( 32, 32 )
+				"minimumSize": new java.awt.Dimension( 32, 32 )
+				"horizontalTextPosition": 0
+				"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				"font": new java.awt.Font( "Segoe UI", 1, 20 )
+				"horizontalAlignment": 0
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikZluta", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labBila"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"opaque": true
+				"maximumSize": &Dimension0 new java.awt.Dimension( 32, 32 )
+				"minimumSize": &Dimension1 new java.awt.Dimension( 32, 32 )
+				"border": &BevelBorder0 new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				"font": &Font0 new java.awt.Font( "Segoe UI", 1, 20 )
+				"horizontalAlignment": 0
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikZelena", true ) )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikBila", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 0"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labZelena"
+				"background": new java.awt.Color( 35, 85, 7, 255 )
+				"opaque": true
+				"maximumSize": #Dimension0
+				"minimumSize": #Dimension1
+				"border": #BevelBorder0
+				"font": #Font0
+				"foreground": sfield java.awt.Color white
+				"horizontalAlignment": 0
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikZelena", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 0"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labModra"
+				"background": new java.awt.Color( 20, 30, 120, 255 )
+				"opaque": true
+				"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				"horizontalTextPosition": 0
+				"maximumSize": new java.awt.Dimension( 32, 32 )
+				"minimumSize": new java.awt.Dimension( 32, 32 )
+				"horizontalAlignment": 0
+				"foreground": sfield java.awt.Color white
+				"font": new java.awt.Font( "Segoe UI", 1, 20 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "klikModra", true ) )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "klikModra", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 0"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnReset"
+				"text": "Reset obrázku"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnReset", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 0 5 1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnNacistObrazek"
+				"text": "Načíst nový obrázek"
+				"actionCommand": "Načíst obrázek"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnNacistObrazekZeSouboru", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnUlozObrazek"
+				"text": "Uložit obrázek"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnUlozObrazek", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 1 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labObrazek"
+				"opaque": true
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "kliknutiNaLabObrazek", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2 11 3"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 13 )
+			"size": new java.awt.Dimension( 456, 373 )
+		} )
+	}
+}
